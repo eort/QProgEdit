@@ -18,9 +18,13 @@ along with QProgEdit.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from PyQt4 import QtGui, QtCore
+try:
+    from PyQt4.QtCore import QString
+except ImportError:
+    QtCore.QString = str
 from PyQt4 import Qsci
 from QProgEdit import QColorScheme
-
+import pdb
 class QBaseLexer(object):
 
 	"""
